@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TVprogram.WebAPI</name>
+    </assembly>
+    <members>
+        <member name="T:TVprogram.WebAPI.AppConfigration.ApplicationExtensions.ApplicationExtensions">
+            <summary>
+            Application builder extensions
+            </summary>
+        </member>
+        <member name="M:TVprogram.WebAPI.AppConfigration.ApplicationExtensions.ApplicationExtensions.UseSerilogConfiguration(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Use serilog configuration
+            </summary>
+            <param name="app"></param>
+        </member>
+        <member name="M:TVprogram.WebAPI.AppConfigration.ApplicationExtensions.ApplicationExtensions.UseSwaggerConfiguration(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Use swagger configuration
+            </summary>
+            <param name="app"></param>
+        </member>
+        <member name="T:TVprogram.WebAPI.AppConfigration.ServicesExtensions.ServicesExtensions">
+            <summary>
+            Services extensions
+            </summary>
+        </member>
+        <member name="M:TVprogram.WebAPI.AppConfigration.ServicesExtensions.ServicesExtensions.AddSerilogConfiguration(Microsoft.AspNetCore.Builder.WebApplicationBuilder)">
+            <summary>
+            Application builder extensions
+            </summary>
+        </member>
+        <member name="M:TVprogram.WebAPI.AppConfigration.ServicesExtensions.ServicesExtensions.AddSwaggerConfiguration(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Add swagger settings
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:TVprogram.WebAPI.AppConfigration.ServicesExtensions.ServicesExtensions.AddVersioningConfiguration(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Configure versioning
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="T:TVprogram.WebAPI.Controllers.WeatherForecastController">
+            <summary>
+            TVProgram endpoints
+            </summary>
+        </member>
+        <member name="M:TVprogram.WebAPI.Controllers.WeatherForecastController.#ctor(Microsoft.Extensions.Logging.ILogger{TVprogram.WebAPI.Controllers.WeatherForecastController})">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:TVprogram.WebAPI.Controllers.WeatherForecastController.Get">
+            <summary>
+            Get 
+            </summary>
+        </member>
+    </members>
+</doc>

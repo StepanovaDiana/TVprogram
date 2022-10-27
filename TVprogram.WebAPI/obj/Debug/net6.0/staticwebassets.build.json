@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "1uQ7QO/LPrZCOHMORw+ByOpdf5l2VVLSEhA2KpFlRek=",
+  "Source": "TVprogram.WebAPI",
+  "BasePath": "_content/TVprogram.WebAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
