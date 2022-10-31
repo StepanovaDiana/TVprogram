@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Projects\\TVprogram\\TVprogram.WebAPI\\TVprogram.WebAPI.csproj",
+  "FilePath": "c:\\Projects\\TVprogram\\TVprogram.Entities\\TVprogram.Entities.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "6.0",
@@ -16295,7 +16295,7 @@
     ],
     "CSharpLanguageVersion": 1000
   },
-  "RootNamespace": "TVprogram.WebAPI",
+  "RootNamespace": "TVprogram.Entities",
   "Documents": [],
   "SerializationFormat": "0.2"
 }
