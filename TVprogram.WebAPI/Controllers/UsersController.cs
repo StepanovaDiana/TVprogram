@@ -35,6 +35,51 @@ namespace TVprogram.WebAPI.Controllers
             var users = _repository.GetAll();
             return Ok(users);
         }
+         /// <summary>
+        /// Get users
+        /// </summary>
+        /// <param name="users"></param>
+        [HttpGet]
+        public IActionResult GetUsers(Guid id)
+        {
+            var users = _repository.GetById(id);
+            return Ok(users);
+        }
+        /// <summary>
+        /// Delete users
+        /// </summary>
+        /// <param name="users"></param>
+        [HttpDelete]
+        public IActionResult DeleteUsers(User user)
+        {
+            _repository.Delete(user);
+            return Ok();
+        }
+        /// <summary>
+        /// Post users
+        /// </summary>
+        /// <param name="users"></param>
+        [HttpPost]
+        public IActionResult PostUsers(User user)
+        {
+           var result= _repository.Save(user);
+            return Ok(result);
+        }
+        
+        /// <summary>
+        /// Update users
+        /// </summary>
+        /// <param name="users"></param>
+        [HttpPut]
+        public IActionResult Updatesers(User user)
+        {
+            return PostUsers(user);
+        }
+        
+        
+
+
+        
     }
 
 }

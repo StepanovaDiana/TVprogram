@@ -64,6 +64,30 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:TVprogram.WebAPI.Controllers.UsersController.GetUsers(System.Guid)">
+            <summary>
+            Get users
+            </summary>
+            <param name="users"></param>
+        </member>
+        <member name="M:TVprogram.WebAPI.Controllers.UsersController.DeleteUsers(TVprogram.Entity.Models.User)">
+            <summary>
+            Delete users
+            </summary>
+            <param name="users"></param>
+        </member>
+        <member name="M:TVprogram.WebAPI.Controllers.UsersController.PostUsers(TVprogram.Entity.Models.User)">
+            <summary>
+            Post users
+            </summary>
+            <param name="users"></param>
+        </member>
+        <member name="M:TVprogram.WebAPI.Controllers.UsersController.Updatesers(TVprogram.Entity.Models.User)">
+            <summary>
+            Update users
+            </summary>
+            <param name="users"></param>
+        </member>
         <member name="T:TVprogram.WebAPI.Controllers.WeatherForecastController">
             <summary>
             TVProgram endpoints
