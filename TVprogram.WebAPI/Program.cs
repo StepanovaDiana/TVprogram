@@ -2,7 +2,7 @@ using TVprogram.WebAPI.AppConfigration.ServicesExtensions;
 using TVprogram.WebAPI.AppConfigration.ApplicationExtensions; 
 using Serilog;
 using Microsoft.EntityFrameworkCore;
-using TVprogram.Entities;
+using TVprogram.Entity;
 
 var configuration = new ConfigurationBuilder()
 .AddJsonFile("appsettings.json", optional: false)
@@ -33,4 +33,18 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();
 
-app.Run();
+app.Run();try
+{
+    Log.Information("Application starting...");
+
+    app.Run();
+}
+catch (Exception ex)
+{
+    Log.Error("Application finished with error {error}", ex);
+}
+finally
+{
+    Log.Information("Application stopped");
+    Log.CloseAndFlush();
+}

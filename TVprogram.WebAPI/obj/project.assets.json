@@ -2753,7 +2753,7 @@
           "lib/netstandard1.3/System.Xml.XmlDocument.dll": {}
         }
       },
-      "TVprogram.Entities/1.0.0": {
+      "TVprogram.Entity/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
@@ -2765,14 +2765,11 @@
           "Microsoft.EntityFrameworkCore.Tools": "6.0.10"
         },
         "compile": {
-          "bin/placeholder/TVprogram.Entities.dll": {}
+          "bin/placeholder/TVprogram.Entity.dll": {}
         },
         "runtime": {
-          "bin/placeholder/TVprogram.Entities.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+          "bin/placeholder/TVprogram.Entity.dll": {}
+        }
       }
     }
   },
@@ -8217,10 +8214,10 @@
         "system.xml.xmldocument.nuspec"
       ]
     },
-    "TVprogram.Entities/1.0.0": {
+    "TVprogram.Entity/1.0.0": {
       "type": "project",
-      "path": "../TVprogram.Entities/TVprogram.Entities.csproj",
-      "msbuildProject": "../TVprogram.Entities/TVprogram.Entities.csproj"
+      "path": "../TVprogram.Entity/TVprogram.Entity.csproj",
+      "msbuildProject": "../TVprogram.Entity/TVprogram.Entity.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -8234,7 +8231,7 @@
       "Serilog.Enrichers.CorrelationId >= 3.0.1",
       "Serilog.Expressions >= 3.4.1",
       "Swashbuckle.AspNetCore >= 6.2.3",
-      "TVprogram.Entities >= 1.0.0"
+      "TVprogram.Entity >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -8264,8 +8261,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Projects\\TVprogram\\TVprogram.Entities\\TVprogram.Entities.csproj": {
-              "projectPath": "C:\\Projects\\TVprogram\\TVprogram.Entities\\TVprogram.Entities.csproj"
+            "C:\\Projects\\TVprogram\\TVprogram.Entity\\TVprogram.Entity.csproj": {
+              "projectPath": "C:\\Projects\\TVprogram\\TVprogram.Entity\\TVprogram.Entity.csproj"
             }
           }
         }

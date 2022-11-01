@@ -1,0 +1,14 @@
+C:\Projects\TVprogram\TVprogram.Entity\bin\Debug\net6.0\TVprogram.Entity.deps.json
+C:\Projects\TVprogram\TVprogram.Entity\bin\Debug\net6.0\TVprogram.Entity.runtimeconfig.json
+C:\Projects\TVprogram\TVprogram.Entity\bin\Debug\net6.0\TVprogram.Entity.dll
+C:\Projects\TVprogram\TVprogram.Entity\bin\Debug\net6.0\TVprogram.Entity.pdb
+C:\Projects\TVprogram\TVprogram.Entity\obj\Debug\net6.0\TVprogram.Entity.csproj.AssemblyReference.cache
+C:\Projects\TVprogram\TVprogram.Entity\obj\Debug\net6.0\TVprogram.Entity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\TVprogram\TVprogram.Entity\obj\Debug\net6.0\TVprogram.Entity.AssemblyInfoInputs.cache
+C:\Projects\TVprogram\TVprogram.Entity\obj\Debug\net6.0\TVprogram.Entity.AssemblyInfo.cs
+C:\Projects\TVprogram\TVprogram.Entity\obj\Debug\net6.0\TVprogram.Entity.csproj.CoreCompileInputs.cache
+C:\Projects\TVprogram\TVprogram.Entity\obj\Debug\net6.0\TVprogram.Entity.dll
+C:\Projects\TVprogram\TVprogram.Entity\obj\Debug\net6.0\refint\TVprogram.Entity.dll
+C:\Projects\TVprogram\TVprogram.Entity\obj\Debug\net6.0\TVprogram.Entity.pdb
+C:\Projects\TVprogram\TVprogram.Entity\obj\Debug\net6.0\TVprogram.Entity.genruntimeconfig.cache
+C:\Projects\TVprogram\TVprogram.Entity\obj\Debug\net6.0\ref\TVprogram.Entity.dll

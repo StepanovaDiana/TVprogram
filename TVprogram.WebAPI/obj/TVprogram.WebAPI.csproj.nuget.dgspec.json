@@ -4,14 +4,14 @@
     "C:\\Projects\\TVprogram\\TVprogram.WebAPI\\TVprogram.WebAPI.csproj": {}
   },
   "projects": {
-    "C:\\Projects\\TVprogram\\TVprogram.Entities\\TVprogram.Entities.csproj": {
+    "C:\\Projects\\TVprogram\\TVprogram.Entity\\TVprogram.Entity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\TVprogram\\TVprogram.Entities\\TVprogram.Entities.csproj",
-        "projectName": "TVprogram.Entities",
-        "projectPath": "C:\\Projects\\TVprogram\\TVprogram.Entities\\TVprogram.Entities.csproj",
+        "projectUniqueName": "C:\\Projects\\TVprogram\\TVprogram.Entity\\TVprogram.Entity.csproj",
+        "projectName": "TVprogram.Entity",
+        "projectPath": "C:\\Projects\\TVprogram\\TVprogram.Entity\\TVprogram.Entity.csproj",
         "packagesPath": "C:\\Users\\Диана\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\TVprogram\\TVprogram.Entities\\obj\\",
+        "outputPath": "C:\\Projects\\TVprogram\\TVprogram.Entity\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Диана\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -77,9 +77,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
@@ -112,8 +109,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Projects\\TVprogram\\TVprogram.Entities\\TVprogram.Entities.csproj": {
-                "projectPath": "C:\\Projects\\TVprogram\\TVprogram.Entities\\TVprogram.Entities.csproj"
+              "C:\\Projects\\TVprogram\\TVprogram.Entity\\TVprogram.Entity.csproj": {
+                "projectPath": "C:\\Projects\\TVprogram\\TVprogram.Entity\\TVprogram.Entity.csproj"
               }
             }
           }
