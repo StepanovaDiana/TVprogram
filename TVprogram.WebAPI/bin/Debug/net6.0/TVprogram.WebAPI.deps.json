@@ -17,7 +17,8 @@
           "Serilog.Enrichers.CorrelationId": "3.0.1",
           "Serilog.Expressions": "3.4.1",
           "Swashbuckle.AspNetCore": "6.2.3",
-          "TVprogram.Entity": "1.0.0"
+          "TVprogram.Entity": "1.0.0",
+          "TVprogram.Repository": "1.0.0"
         },
         "runtime": {
           "TVprogram.WebAPI.dll": {}
@@ -1497,6 +1498,15 @@
         "runtime": {
           "TVprogram.Entity.dll": {}
         }
+      },
+      "TVprogram.Repository/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "6.0.10",
+          "TVprogram.Entity": "1.0.0"
+        },
+        "runtime": {
+          "TVprogram.Repository.dll": {}
+        }
       }
     }
   },
@@ -2599,6 +2609,11 @@
       "hashPath": "system.xml.xmldocument.4.3.0.nupkg.sha512"
     },
     "TVprogram.Entity/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TVprogram.Repository/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

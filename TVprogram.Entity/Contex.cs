@@ -1,6 +1,6 @@
 ﻿using TVprogram.Entity.Models;
 using Microsoft.EntityFrameworkCore;
-namespace TVprogram.Entitity;
+namespace TVprogram.Entity;
 public class Context:DbContext
 {
     public DbSet<Admin>? Admin{get;set;}

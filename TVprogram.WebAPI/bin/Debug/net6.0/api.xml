@@ -26,6 +26,12 @@
             Services extensions
             </summary>
         </member>
+        <member name="M:TVprogram.WebAPI.AppConfigration.ServicesExtensions.ServicesExtensions.AddDbContextConfiguration(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Add serilog configuration
+            </summary>
+            <param name="builder"></param>
+        </member>
         <member name="M:TVprogram.WebAPI.AppConfigration.ServicesExtensions.ServicesExtensions.AddSerilogConfiguration(Microsoft.AspNetCore.Builder.WebApplicationBuilder)">
             <summary>
             Application builder extensions
@@ -42,6 +48,21 @@
             Configure versioning
             </summary>
             <param name="services"></param>
+        </member>
+        <member name="T:TVprogram.WebAPI.Controllers.UsersController">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:TVprogram.WebAPI.Controllers.UsersController.#ctor(TVprogram.Repository.IRepository{TVprogram.Entity.Models.User})">
+            <summary>
+            Users controller
+            </summary>
+        </member>
+        <member name="M:TVprogram.WebAPI.Controllers.UsersController.GetUsers">
+            <summary>
+            Get users
+            </summary>
+            <returns></returns>
         </member>
         <member name="T:TVprogram.WebAPI.Controllers.WeatherForecastController">
             <summary>

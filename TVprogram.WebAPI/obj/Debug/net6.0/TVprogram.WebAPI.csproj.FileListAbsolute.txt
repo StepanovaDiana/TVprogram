@@ -79,3 +79,5 @@ C:\Projects\TVprogram\TVprogram.WebAPI\bin\Debug\net6.0\runtimes\win\lib\netstan
 C:\Projects\TVprogram\TVprogram.WebAPI\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 C:\Projects\TVprogram\TVprogram.WebAPI\bin\Debug\net6.0\TVprogram.Entity.dll
 C:\Projects\TVprogram\TVprogram.WebAPI\bin\Debug\net6.0\TVprogram.Entity.pdb
+C:\Projects\TVprogram\TVprogram.WebAPI\bin\Debug\net6.0\TVprogram.Repository.dll
+C:\Projects\TVprogram\TVprogram.WebAPI\bin\Debug\net6.0\TVprogram.Repository.pdb

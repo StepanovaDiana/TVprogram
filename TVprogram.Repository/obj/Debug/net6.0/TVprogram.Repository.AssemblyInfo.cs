@@ -10,12 +10,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("TVprogram.Entities")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("TVprogram.Repository")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("TVprogram.Entities")]
-[assembly: System.Reflection.AssemblyTitleAttribute("TVprogram.Entities")]
+[assembly: System.Reflection.AssemblyProductAttribute("TVprogram.Repository")]
+[assembly: System.Reflection.AssemblyTitleAttribute("TVprogram.Repository")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Создано классом WriteCodeFragment MSBuild.

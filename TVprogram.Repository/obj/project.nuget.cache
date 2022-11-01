@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "utQHbVOHUrlTaM71oMg+B5wrjxkT2pU0WFx4Sa62tzPxQ+EtoO4j2f1AjdVt72Qrmt/1k9GLcY+45BYVSV14mg==",
+  "dgSpecHash": "KGiaNOy9x3HsjO7UPXFrGUjDA4M2b/GwVi12oblc9qx6c1sXnZBEaATbhejher+xfPvUbwxlhP/wmk2H/T3SXw==",
   "success": true,
-  "projectFilePath": "C:\\Projects\\TVprogram\\TVprogram.Entities\\TVprogram.Entities.csproj",
+  "projectFilePath": "C:\\Projects\\TVprogram\\TVprogram.Repository\\TVprogram.Repository.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Диана\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Диана\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

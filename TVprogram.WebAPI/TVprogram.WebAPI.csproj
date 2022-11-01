@@ -19,5 +19,6 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TVprogram.Entity\TVprogram.Entity.csproj" />
+    <ProjectReference Include="..\TVprogram.Repository\TVprogram.Repository.csproj" />
   </ItemGroup>
 </Project>

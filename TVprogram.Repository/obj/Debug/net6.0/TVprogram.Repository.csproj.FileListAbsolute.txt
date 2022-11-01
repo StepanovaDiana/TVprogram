@@ -1,0 +1,15 @@
+C:\Projects\TVprogram\TVprogram.Repository\bin\Debug\net6.0\TVprogram.Repository.deps.json
+C:\Projects\TVprogram\TVprogram.Repository\bin\Debug\net6.0\TVprogram.Repository.dll
+C:\Projects\TVprogram\TVprogram.Repository\bin\Debug\net6.0\TVprogram.Repository.pdb
+C:\Projects\TVprogram\TVprogram.Repository\bin\Debug\net6.0\TVprogram.Entity.dll
+C:\Projects\TVprogram\TVprogram.Repository\bin\Debug\net6.0\TVprogram.Entity.pdb
+C:\Projects\TVprogram\TVprogram.Repository\obj\Debug\net6.0\TVprogram.Repository.csproj.AssemblyReference.cache
+C:\Projects\TVprogram\TVprogram.Repository\obj\Debug\net6.0\TVprogram.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\TVprogram\TVprogram.Repository\obj\Debug\net6.0\TVprogram.Repository.AssemblyInfoInputs.cache
+C:\Projects\TVprogram\TVprogram.Repository\obj\Debug\net6.0\TVprogram.Repository.AssemblyInfo.cs
+C:\Projects\TVprogram\TVprogram.Repository\obj\Debug\net6.0\TVprogram.Repository.csproj.CoreCompileInputs.cache
+C:\Projects\TVprogram\TVprogram.Repository\obj\Debug\net6.0\TVprogram.Repository.csproj.CopyComplete
+C:\Projects\TVprogram\TVprogram.Repository\obj\Debug\net6.0\TVprogram.Repository.dll
+C:\Projects\TVprogram\TVprogram.Repository\obj\Debug\net6.0\refint\TVprogram.Repository.dll
+C:\Projects\TVprogram\TVprogram.Repository\obj\Debug\net6.0\TVprogram.Repository.pdb
+C:\Projects\TVprogram\TVprogram.Repository\obj\Debug\net6.0\ref\TVprogram.Repository.dll
