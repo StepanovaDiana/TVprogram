@@ -1,17 +1,23 @@
+﻿using TVprogram.Entity.Models;
 using Microsoft.EntityFrameworkCore;
-using TVprogram.Entities.Models;
-namespace TVprogram.Entities;
+namespace TVprogram.Entity;
 public class Context:DbContext
 {
-    public DbSet<Admin> Admin{get;set;}
-    public DbSet<Channel> Channels{get;set;}
-    public DbSet<Programa>  Programs{get;set;}
-    public DbSet<User> Users{get;set;}
-    public DbSet<Users_Channel_list> UserChannelLists{get;set;}
-    public Context(DbContextOptions<Context> options): base(options){}
+    public DbSet<Admin>? Admin{get;set;}
+    public DbSet<Channel>? Channels{get;set;}
+    public DbSet<Programa>?  Programs{get;set;}
+    public DbSet<User>? Users{get;set;}
+    public DbSet<Users_Channel_list>? UserChannelLists{get;set;}
+    public Context  (DbContextOptions<Context> options): base(options){}
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
+        #region Admin
+
+        builder.Entity<Admin>().ToTable("admin");
+        builder.Entity<Admin>().HasKey(x => x.Id);
+
+        #endregion
         #region Users
 
         builder.Entity<User>().ToTable("users");
@@ -54,3 +60,5 @@ public class Context:DbContext
 
     }
 }
+
+

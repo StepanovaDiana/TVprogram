@@ -6,5 +6,5 @@ public class Programa:BaseEntity
     public string? Name{get;set;}
     public DateTime DateTime{get;set;}
     public int Duration{get;set;}
-    public Guid IDprogram{get;set;}
+    
 }

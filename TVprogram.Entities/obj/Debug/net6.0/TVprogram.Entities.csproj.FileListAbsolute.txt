@@ -1,6 +1,0 @@
-C:\Projects\TVprogram\TVprogram.Entities\obj\Debug\net6.0\TVprogram.Entities.csproj.AssemblyReference.cache
-C:\Projects\TVprogram\TVprogram.Entities\obj\Debug\net6.0\TVprogram.Entities.GeneratedMSBuildEditorConfig.editorconfig
-C:\Projects\TVprogram\TVprogram.Entities\obj\Debug\net6.0\TVprogram.Entities.AssemblyInfoInputs.cache
-C:\Projects\TVprogram\TVprogram.Entities\obj\Debug\net6.0\TVprogram.Entities.AssemblyInfo.cs
-C:\Projects\TVprogram\TVprogram.Entities\obj\Debug\net6.0\TVprogram.Entities.csproj.CoreCompileInputs.cache
-C:\Projects\TVprogram\TVprogram.Entities\obj\Debug\net6.0\TVprogram.Entities.MvcApplicationPartsAssemblyInfo.cache
