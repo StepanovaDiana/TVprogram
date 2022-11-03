@@ -58,17 +58,17 @@
             Users controller
             </summary>
         </member>
-        <member name="M:TVprogram.WebAPI.Controllers.UsersController.GetUsers">
-            <summary>
-            Get users
-            </summary>
-            <returns></returns>
-        </member>
         <member name="M:TVprogram.WebAPI.Controllers.UsersController.GetUsers(System.Guid)">
             <summary>
             Get users
             </summary>
             <param name="users"></param>
+        </member>
+        <member name="M:TVprogram.WebAPI.Controllers.UsersController.GetUsers">
+            <summary>
+            Get users
+            </summary>
+            <returns></returns>
         </member>
         <member name="M:TVprogram.WebAPI.Controllers.UsersController.DeleteUsers(TVprogram.Entity.Models.User)">
             <summary>

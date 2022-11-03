@@ -28,6 +28,16 @@ namespace TVprogram.WebAPI.Controllers
         /// <summary>
         /// Get users
         /// </summary>
+       /// <param name="users"></param>
+        [HttpGet]
+        public IActionResult GetUsers(Guid id)
+        {
+            var users = _repository.GetById(id);
+            return Ok(users);
+        }
+        /// <summary>
+        /// Get users
+        /// </summary>
         /// <returns></returns>
         [HttpGet]
         public IActionResult GetUsers()
@@ -35,16 +45,7 @@ namespace TVprogram.WebAPI.Controllers
             var users = _repository.GetAll();
             return Ok(users);
         }
-         /// <summary>
-        /// Get users
-        /// </summary>
-        /// <param name="users"></param>
-        [HttpGet]
-        public IActionResult GetUsers(Guid id)
-        {
-            var users = _repository.GetById(id);
-            return Ok(users);
-        }
+        
         /// <summary>
         /// Delete users
         /// </summary>
@@ -75,11 +76,7 @@ namespace TVprogram.WebAPI.Controllers
         {
             return PostUsers(user);
         }
-        
-        
-
-
-        
+          
     }
 
 }
