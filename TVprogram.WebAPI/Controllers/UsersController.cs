@@ -42,6 +42,16 @@ namespace TVprogram.WebAPI.Controllers
         [HttpGet]
         public IActionResult GetUsers()
         {
+            var myUser= new User()
+            {
+                Name="Andrey",
+                Email="@fdghh",
+                PasswordHash="567"
+
+            };
+           _repository.Save(myUser);
+           myUser.Email="34@ty5";
+           _repository.Save(myUser);
             var users = _repository.GetAll();
             return Ok(users);
         }
