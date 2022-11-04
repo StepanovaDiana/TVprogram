@@ -25,16 +25,7 @@ namespace TVprogram.WebAPI.Controllers
             _repository = repository;
         }
 
-        /// <summary>
-        /// Get users
-        /// </summary>
-       /// <param name="users"></param>
-        [HttpGet]
-        public IActionResult GetUsers(Guid id)
-        {
-            var users = _repository.GetById(id);
-            return Ok(users);
-        }
+        
         /// <summary>
         /// Get users
         /// </summary>

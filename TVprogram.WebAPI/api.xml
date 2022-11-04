@@ -58,12 +58,6 @@
             Users controller
             </summary>
         </member>
-        <member name="M:TVprogram.WebAPI.Controllers.UsersController.GetUsers(System.Guid)">
-            <summary>
-            Get users
-            </summary>
-            <param name="users"></param>
-        </member>
         <member name="M:TVprogram.WebAPI.Controllers.UsersController.GetUsers">
             <summary>
             Get users
