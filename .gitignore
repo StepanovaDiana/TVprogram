@@ -43,3 +43,5 @@ TVprogram.Entities/obj/Debug/net6.0/TVprogram.Entities.csproj.CoreCompileInputs.
 TVprogram.Entities/obj/Debug/net6.0/TVprogram.Entities.csproj.FileListAbsolute.txt
 TVprogram.Entities/obj/Debug/net6.0/TVprogram.Entities.GeneratedMSBuildEditorConfig.editorconfig
 TVprogram.Entities/obj/Debug/net6.0/TVprogram.Entities.GlobalUsings.g.cs
+TVprogram.Entity/bin/Debug/net6.0/TVprogram.Entity.dll
+TVprogram.Entity/bin/Debug/net6.0/TVprogram.Entity.pdb

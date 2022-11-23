@@ -1,10 +1,8 @@
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
 
-namespace TVprogram.WebAPI.AppConfigration.ApplicationExtensions
+namespace TVprogram.WebAPI.AppConfiguration.ApplicationExtensions
 {
-    /// <summary>
-    /// Application builder extensions
-    /// </summary>
+   
     public static partial class ApplicationExtensions
     {
          /// <summary>

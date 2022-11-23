@@ -8,5 +8,5 @@ public class Users_Channel_list:BaseEntity
     public virtual Guid ChannelId{get;set;}
     public virtual Channel? Channel{get;set;}
     
-    public bool FavoriteChannel{get; set;}
+    public bool Favorite_Channel{get; set;}
 }

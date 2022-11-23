@@ -1,9 +1,9 @@
 using TVprogram.Repository;
-using TVprogram.WebAPI.AppConfigration.ServicesExtensions;
-using TVprogram.WebAPI.AppConfigration.ApplicationExtensions; 
+using TVprogram.Services;
+using TVprogram.WebAPI.AppConfiguration.ServicesExtensions;
+using TVprogram.WebAPI.AppConfiguration.ApplicationExtensions;
 using Serilog;
-using Microsoft.EntityFrameworkCore;
-using TVprogram.Entity;
+
 
 var configuration = new ConfigurationBuilder()
 .AddJsonFile("appsettings.json", optional: false)
@@ -14,12 +14,12 @@ var builder = WebApplication.CreateBuilder(args);
 builder.AddSerilogConfiguration();
 builder.Services.AddDbContextConfiguration(configuration);
 builder.Services.AddVersioningConfiguration();
+builder.Services.AddMapperConfiguration();
 builder.Services.AddControllers();
 builder.Services.AddSwaggerConfiguration();
+builder.Services.AddRepositoryConfiguration();
+builder.Services.AddBusinessLogicConfiguration();
 
-//temporary
-builder.Services.AddScoped<DbContext, Context>();
-builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 
 var app = builder.Build();
 

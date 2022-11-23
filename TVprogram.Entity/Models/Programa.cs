@@ -4,7 +4,7 @@ public class Programa:BaseEntity
     public virtual Guid ChannelId{get;set;}
     public virtual Channel? Channel{get;set;}
     public string? Name{get;set;}
-    public DateTime DateTime{get;set;}
+    public DateTime Time{get;set;}
     public int Duration{get;set;}
     
 }

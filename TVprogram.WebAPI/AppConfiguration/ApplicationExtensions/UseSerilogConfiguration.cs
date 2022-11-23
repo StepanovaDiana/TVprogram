@@ -1,6 +1,6 @@
 using Serilog;
 
-namespace TVprogram.WebAPI.AppConfigration.ApplicationExtensions
+namespace TVprogram.WebAPI.AppConfiguration.ApplicationExtensions
 {
     public static partial class ApplicationExtensions
     {

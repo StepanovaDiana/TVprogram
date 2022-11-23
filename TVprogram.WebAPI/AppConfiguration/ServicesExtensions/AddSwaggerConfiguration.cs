@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.OpenApi.Models;
 
-namespace TVprogram.WebAPI.AppConfigration.ServicesExtensions
+namespace TVprogram.WebAPI.AppConfiguration.ServicesExtensions
 {
     public static partial class ServicesExtensions
     {

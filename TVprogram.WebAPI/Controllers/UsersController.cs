@@ -1,8 +1,7 @@
-using System.Globalization;
-using System.Reflection.Metadata;
-using System.Runtime.InteropServices;
-using TVprogram.Entity.Models;
-using TVprogram.Repository;
+using AutoMapper;
+using TVprogram.Services.Abstract;
+using TVprogram.Services.Models;
+using TVprogram.WebAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace TVprogram.WebAPI.Controllers
@@ -15,67 +14,86 @@ namespace TVprogram.WebAPI.Controllers
     [ApiController]
     public class UsersController : ControllerBase
     {
-        private IRepository<User> _repository;
+        private readonly IUserService userServise;
+        private readonly IMapper mapper;
 
         /// <summary>
         /// Users controller
         /// </summary>
-        public UsersController(IRepository<User> repository)
+        public UsersController(IUserService userService,IMapper mapper)
         {
-            _repository = repository;
+            this.userServise=userService;
+            this.mapper=mapper;
         }
 
         
         /// <summary>
-        /// Get users
+        /// Get users by pages
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        public IActionResult GetUsers()
-        {
-            var myUser= new User()
-            {
-                Name="Andrey",
-                Email="@fdghh",
-                PasswordHash="567"
-
-            };
-           _repository.Save(myUser);
-           myUser.Email="34@ty5";
-           _repository.Save(myUser);
-            var users = _repository.GetAll();
-            return Ok(users);
-        }
         
+        public IActionResult GetUsers([FromQuery] int limit = 20, [FromQuery] int offset = 0)
+        {
+            var pageModel =userServise.GetUsers(limit,offset);
+
+            return Ok(mapper.Map<PageResponse<UserResponse>>(pageModel));
+        }
         /// <summary>
         /// Delete users
         /// </summary>
         /// <param name="users"></param>
         [HttpDelete]
-        public IActionResult DeleteUsers(User user)
+        public IActionResult DeleteUser([FromRoute] Guid id)
         {
-            _repository.Delete(user);
-            return Ok();
+            try
+            {
+                userServise.DeleteUser(id);
+                return Ok();
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex.ToString());
+            }
         }
         /// <summary>
-        /// Post users
+        /// Get user
         /// </summary>
-        /// <param name="users"></param>
-        [HttpPost]
-        public IActionResult PostUsers(User user)
+        [HttpGet]
+        [Route("{id}")]
+        public IActionResult GetUser([FromRoute] Guid id)
         {
-           var result= _repository.Save(user);
-            return Ok(result);
+            try
+            {
+                var userModel =userServise.GetUser(id);
+                return Ok(mapper.Map<UserResponse>(userModel));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.ToString());
+            }
         }
-        
         /// <summary>
         /// Update users
         /// </summary>
-        /// <param name="users"></param>
         [HttpPut]
-        public IActionResult Updatesers(User user)
+        [Route("{id}")]
+        public IActionResult UpdateUser([FromRoute] Guid id, [FromBody] UpdateUserRequest model)
         {
-            return PostUsers(user);
+           var validationResult =model.Validate();
+           if(!validationResult.IsValid)
+           {
+            return BadRequest(validationResult.Errors);
+           }
+           try
+           {
+            var resultModel = userServise.UpdateUser(id,mapper.Map<UpdateUserModel>(model));
+            return Ok(mapper.Map<UserResponse>(resultModel));
+           }
+           catch(Exception ex)
+           {
+            return BadRequest(ex.ToString());
+           }
         }
           
     }

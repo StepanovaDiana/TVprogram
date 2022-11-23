@@ -1,5 +1,5 @@
 using Serilog;
-namespace TVprogram.WebAPI.AppConfigration.ServicesExtensions
+namespace TVprogram.WebAPI.AppConfiguration.ServicesExtensions
 {
     /// <summary>
     /// Services extensions

@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TVprogram.Entity", "TVprogr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TVprogram.Repository", "TVprogram.Repository\TVprogram.Repository.csproj", "{7EB447C7-1645-436B-90E4-304DCF4D8808}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TVprogram.Services", "TVprogram.Services\TVprogram.Services.csproj", "{BA271EB9-B1A6-442A-98E5-640CC706EAB8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{7EB447C7-1645-436B-90E4-304DCF4D8808}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7EB447C7-1645-436B-90E4-304DCF4D8808}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7EB447C7-1645-436B-90E4-304DCF4D8808}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA271EB9-B1A6-442A-98E5-640CC706EAB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA271EB9-B1A6-442A-98E5-640CC706EAB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA271EB9-B1A6-442A-98E5-640CC706EAB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA271EB9-B1A6-442A-98E5-640CC706EAB8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

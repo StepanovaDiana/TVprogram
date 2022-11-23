@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-namespace TVprogram.WebAPI.AppConfigration.ServicesExtensions
+namespace TVprogram.WebAPI.AppConfiguration.ServicesExtensions
 {
     public static partial class ServicesExtensions
     {

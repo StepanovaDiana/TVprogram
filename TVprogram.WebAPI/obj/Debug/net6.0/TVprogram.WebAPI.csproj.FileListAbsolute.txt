@@ -81,3 +81,11 @@ C:\Projects\TVprogram\TVprogram.WebAPI\bin\Debug\net6.0\TVprogram.Entity.dll
 C:\Projects\TVprogram\TVprogram.WebAPI\bin\Debug\net6.0\TVprogram.Entity.pdb
 C:\Projects\TVprogram\TVprogram.WebAPI\bin\Debug\net6.0\TVprogram.Repository.dll
 C:\Projects\TVprogram\TVprogram.WebAPI\bin\Debug\net6.0\TVprogram.Repository.pdb
+C:\Projects\TVprogram\TVprogram.WebAPI\bin\Debug\net6.0\AutoMapper.dll
+C:\Projects\TVprogram\TVprogram.WebAPI\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Projects\TVprogram\TVprogram.WebAPI\bin\Debug\net6.0\FluentValidation.dll
+C:\Projects\TVprogram\TVprogram.WebAPI\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Projects\TVprogram\TVprogram.WebAPI\bin\Debug\net6.0\Serilog.Sinks.PeriodicBatching.dll
+C:\Projects\TVprogram\TVprogram.WebAPI\bin\Debug\net6.0\Serilog.Sinks.Seq.dll
+C:\Projects\TVprogram\TVprogram.WebAPI\bin\Debug\net6.0\TVprogram.Services.dll
+C:\Projects\TVprogram\TVprogram.WebAPI\bin\Debug\net6.0\TVprogram.Services.pdb

@@ -4,83 +4,202 @@
         <name>TVprogram.WebAPI</name>
     </assembly>
     <members>
-        <member name="T:TVprogram.WebAPI.AppConfigration.ApplicationExtensions.ApplicationExtensions">
-            <summary>
-            Application builder extensions
-            </summary>
-        </member>
-        <member name="M:TVprogram.WebAPI.AppConfigration.ApplicationExtensions.ApplicationExtensions.UseSerilogConfiguration(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+        <member name="M:TVprogram.WebAPI.AppConfiguration.ApplicationExtensions.ApplicationExtensions.UseSerilogConfiguration(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
             <summary>
             Use serilog configuration
             </summary>
             <param name="app"></param>
         </member>
-        <member name="M:TVprogram.WebAPI.AppConfigration.ApplicationExtensions.ApplicationExtensions.UseSwaggerConfiguration(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+        <member name="M:TVprogram.WebAPI.AppConfiguration.ApplicationExtensions.ApplicationExtensions.UseSwaggerConfiguration(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
             <summary>
             Use swagger configuration
             </summary>
             <param name="app"></param>
         </member>
-        <member name="T:TVprogram.WebAPI.AppConfigration.ServicesExtensions.ServicesExtensions">
+        <member name="T:TVprogram.WebAPI.AppConfiguration.ServicesExtensions.ServicesExtensions">
             <summary>
             Services extensions
             </summary>
         </member>
-        <member name="M:TVprogram.WebAPI.AppConfigration.ServicesExtensions.ServicesExtensions.AddDbContextConfiguration(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+        <member name="M:TVprogram.WebAPI.AppConfiguration.ServicesExtensions.ServicesExtensions.AddDbContextConfiguration(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
             <summary>
             Add serilog configuration
             </summary>
             <param name="builder"></param>
         </member>
-        <member name="M:TVprogram.WebAPI.AppConfigration.ServicesExtensions.ServicesExtensions.AddSerilogConfiguration(Microsoft.AspNetCore.Builder.WebApplicationBuilder)">
+        <member name="M:TVprogram.WebAPI.AppConfiguration.ServicesExtensions.ServicesExtensions.AddMapperConfiguration(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Add serilog configuration
+            </summary>
+            <param name="builder"></param>
+        </member>
+        <member name="M:TVprogram.WebAPI.AppConfiguration.ServicesExtensions.ServicesExtensions.AddSerilogConfiguration(Microsoft.AspNetCore.Builder.WebApplicationBuilder)">
             <summary>
             Application builder extensions
             </summary>
         </member>
-        <member name="M:TVprogram.WebAPI.AppConfigration.ServicesExtensions.ServicesExtensions.AddSwaggerConfiguration(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+        <member name="M:TVprogram.WebAPI.AppConfiguration.ServicesExtensions.ServicesExtensions.AddSwaggerConfiguration(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
             <summary>
             Add swagger settings
             </summary>
             <param name="services"></param>
         </member>
-        <member name="M:TVprogram.WebAPI.AppConfigration.ServicesExtensions.ServicesExtensions.AddVersioningConfiguration(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+        <member name="M:TVprogram.WebAPI.AppConfiguration.ServicesExtensions.ServicesExtensions.AddVersioningConfiguration(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
             <summary>
             Configure versioning
             </summary>
             <param name="services"></param>
         </member>
+        <member name="T:TVprogram.WebAPI.Controllers.AdminController">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:TVprogram.WebAPI.Controllers.AdminController.#ctor(TVprogram.Services.Abstract.IAdminService,AutoMapper.IMapper)">
+            <summary>
+            admin controller
+            </summary>
+        </member>
+        <member name="M:TVprogram.WebAPI.Controllers.AdminController.GetAdmins(System.Int32,System.Int32)">
+            <summary>
+            Get admin by pages
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TVprogram.WebAPI.Controllers.AdminController.DeleteAdmin(System.Guid)">
+            <summary>
+            Delete admin
+            </summary>
+        </member>
+        <member name="M:TVprogram.WebAPI.Controllers.AdminController.GetAdmin(System.Guid)">
+            <summary>
+            Get admin
+            </summary>
+        </member>
+        <member name="M:TVprogram.WebAPI.Controllers.AdminController.UpdateAdmin(System.Guid,TVprogram.WebAPI.Models.UpdateAdminRequest)">
+            <summary>
+            Update admin
+            </summary>
+        </member>
+        <member name="T:TVprogram.WebAPI.Controllers.ChannelsController">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:TVprogram.WebAPI.Controllers.ChannelsController.#ctor(TVprogram.Services.Abstract.IChannelService,AutoMapper.IMapper)">
+            <summary>
+            Channels controller
+            </summary>
+        </member>
+        <member name="M:TVprogram.WebAPI.Controllers.ChannelsController.GetChannels(System.Int32,System.Int32)">
+            <summary>
+            Get channels by pages
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TVprogram.WebAPI.Controllers.ChannelsController.DeleteChannel(System.Guid)">
+            <summary>
+            Delete channels
+            </summary>
+        </member>
+        <member name="M:TVprogram.WebAPI.Controllers.ChannelsController.GetChannel(System.Guid)">
+            <summary>
+            Get channel
+            </summary>
+        </member>
+        <member name="M:TVprogram.WebAPI.Controllers.ChannelsController.UpdateChannel(System.Guid,TVprogram.WebAPI.Models.UpdateChannelRequest)">
+            <summary>
+            Update channel
+            </summary>
+        </member>
+        <member name="T:TVprogram.WebAPI.Controllers.ProgramsController">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:TVprogram.WebAPI.Controllers.ProgramsController.#ctor(TVprogram.Services.Abstract.IProgramService,AutoMapper.IMapper)">
+            <summary>
+            Programs controller
+            </summary>
+        </member>
+        <member name="M:TVprogram.WebAPI.Controllers.ProgramsController.GetPrograms(System.Int32,System.Int32)">
+            <summary>
+            Get programs by pages
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TVprogram.WebAPI.Controllers.ProgramsController.DeleteProgram(System.Guid)">
+            <summary>
+            Delete programs
+            </summary>
+        </member>
+        <member name="M:TVprogram.WebAPI.Controllers.ProgramsController.GetProgram(System.Guid)">
+            <summary>
+            Get program
+            </summary>
+        </member>
+        <member name="M:TVprogram.WebAPI.Controllers.ProgramsController.UpdateProgram(System.Guid,TVprogram.WebAPI.Models.UpdateProgramRequest)">
+            <summary>
+            Update program
+            </summary>
+        </member>
         <member name="T:TVprogram.WebAPI.Controllers.UsersController">
             <summary>
             </summary>
         </member>
-        <member name="M:TVprogram.WebAPI.Controllers.UsersController.#ctor(TVprogram.Repository.IRepository{TVprogram.Entity.Models.User})">
+        <member name="M:TVprogram.WebAPI.Controllers.UsersController.#ctor(TVprogram.Services.Abstract.IUserService,AutoMapper.IMapper)">
             <summary>
             Users controller
             </summary>
         </member>
-        <member name="M:TVprogram.WebAPI.Controllers.UsersController.GetUsers">
+        <member name="M:TVprogram.WebAPI.Controllers.UsersController.GetUsers(System.Int32,System.Int32)">
             <summary>
-            Get users
+            Get users by pages
             </summary>
             <returns></returns>
         </member>
-        <member name="M:TVprogram.WebAPI.Controllers.UsersController.DeleteUsers(TVprogram.Entity.Models.User)">
+        <member name="M:TVprogram.WebAPI.Controllers.UsersController.DeleteUser(System.Guid)">
             <summary>
             Delete users
             </summary>
             <param name="users"></param>
         </member>
-        <member name="M:TVprogram.WebAPI.Controllers.UsersController.PostUsers(TVprogram.Entity.Models.User)">
+        <member name="M:TVprogram.WebAPI.Controllers.UsersController.GetUser(System.Guid)">
             <summary>
-            Post users
+            Get user
             </summary>
-            <param name="users"></param>
         </member>
-        <member name="M:TVprogram.WebAPI.Controllers.UsersController.Updatesers(TVprogram.Entity.Models.User)">
+        <member name="M:TVprogram.WebAPI.Controllers.UsersController.UpdateUser(System.Guid,TVprogram.WebAPI.Models.UpdateUserRequest)">
             <summary>
             Update users
             </summary>
-            <param name="users"></param>
+        </member>
+        <member name="T:TVprogram.WebAPI.Controllers.Users_Channel_listController">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:TVprogram.WebAPI.Controllers.Users_Channel_listController.#ctor(TVprogram.Services.Abstract.IUser_Channel_listService,AutoMapper.IMapper)">
+            <summary>
+            users_channel_list controller
+            </summary>
+        </member>
+        <member name="M:TVprogram.WebAPI.Controllers.Users_Channel_listController.GetUsers_Channel_list(System.Int32,System.Int32)">
+            <summary>
+            Get users_channel_list by pages
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TVprogram.WebAPI.Controllers.Users_Channel_listController.DeleteUser_Channel_list(System.Guid)">
+            <summary>
+            Delete users_channel_list
+            </summary>
+        </member>
+        <member name="M:TVprogram.WebAPI.Controllers.Users_Channel_listController.GetUser_Channel_list(System.Guid)">
+            <summary>
+            Get user_channel_list
+            </summary>
+        </member>
+        <member name="M:TVprogram.WebAPI.Controllers.Users_Channel_listController.UpdateUser_Channel_list(System.Guid,TVprogram.WebAPI.Models.UpdateUser_Channel_listRequest)">
+            <summary>
+            Update user_channel_list
+            </summary>
         </member>
     </members>
 </doc>

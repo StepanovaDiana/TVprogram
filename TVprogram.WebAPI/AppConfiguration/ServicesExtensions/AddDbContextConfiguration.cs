@@ -1,7 +1,7 @@
 using TVprogram.Entity;
 using Microsoft.EntityFrameworkCore;
 
-namespace TVprogram.WebAPI.AppConfigration.ServicesExtensions;
+namespace TVprogram.WebAPI.AppConfiguration.ServicesExtensions;
 
 public static partial class ServicesExtensions
 {
