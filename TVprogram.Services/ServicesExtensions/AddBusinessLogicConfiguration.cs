@@ -10,6 +10,7 @@ public static partial class ServicesExtensions
     {
         services.AddAutoMapper(typeof(ServicesProfile));
         //services
+        services.AddScoped<IAdminService, AdminService>();
         services.AddScoped<IUserService, UserService>();
         services.AddScoped<IChannelService, ChannelService>();
         services.AddScoped<IProgramService, ProgramService>();
