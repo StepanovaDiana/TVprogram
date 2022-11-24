@@ -18,7 +18,7 @@ public class ServicesProfile : Profile
 
         #endregion
 
-        /*#region Channel
+        #region Channel
 
         CreateMap<Channel, ChannelModel>().ReverseMap();
         CreateMap<Channel, ChannelPreviewModel>()
@@ -30,19 +30,19 @@ public class ServicesProfile : Profile
         CreateMap<Programa, ProgramModel>().ReverseMap();
         CreateMap<Programa, ProgramPreviewModel>()
             .ForMember(x => x.Name, y => y.MapFrom(u => u.Name))
-            .ForMember(x => x.Datetime, y => y.MapFrom(u => u.Datetime))
+            .ForMember(x => x.Time, y => y.MapFrom(u => u.Time))
             .ForMember(x => x.Duration, y => y.MapFrom(u => u.Duration));
 
         #endregion
 
         #region Users_Channel_list
 
-        CreateMap<User_Channel_list, User_Channel_listModel>().ReverseMap();
-        CreateMap<User_Channel_list, Users_Channel_listPreviewModel>()
+        CreateMap<Users_Channel_list, User_Channel_listModel>().ReverseMap();
+        CreateMap<Users_Channel_list, User_Channel_listPreviewModel>()
             .ForMember(x => x.Favorite_Channel, y => y.MapFrom(u => u.Favorite_Channel));
             
 
-        #endregion*/
+        #endregion
 
 
 
