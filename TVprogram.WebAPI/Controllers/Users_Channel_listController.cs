@@ -81,11 +81,11 @@ namespace TVprogram.WebAPI.Controllers
         [Route("{id}")]
         public IActionResult UpdateUser_Channel_list([FromRoute] Guid id, [FromBody] UpdateUser_Channel_listRequest model)
         {
-           /*var validationResult =model.Validate();
+           var validationResult =model.Validate();
            if(!validationResult.IsValid)
            {
             return BadRequest(validationResult.Errors);
-           }*/
+           }
            try
            {
             var resultModel =user_Channel_ListService.UpdateUser_Channel_list(id,mapper.Map<UpdateUser_Channel_listModel>(model));
