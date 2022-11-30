@@ -25,6 +25,16 @@ namespace TVprogram.WebAPI.Controllers
             this.adminService=adminService;
             this.mapper=mapper;
         }
+        /// <summary>
+        /// create admin
+        /// </summary>
+        /// <returns></returns>
+        [HttpPost]
+        public IActionResult CreateAdmin([FromBody] AdminModel admin)
+        {
+            var response =adminService.CreateAdmin(admin);
+            return Ok(response);
+        }
 
         
         /// <summary>

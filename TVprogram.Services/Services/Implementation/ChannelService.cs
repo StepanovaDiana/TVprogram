@@ -56,4 +56,9 @@ public class ChannelService :IChannelService
         existingChannel = channelRepository.Save(existingChannel);
         return mapper.Map<ChannelModel>(existingChannel);
     }
+    ChannelModel IChannelService.CreateChannel(ChannelModel channelModel)
+    {
+       channelRepository.Save(mapper.Map<Entity.Models.Channel>(channelModel));
+        return channelModel;
+    }
 }

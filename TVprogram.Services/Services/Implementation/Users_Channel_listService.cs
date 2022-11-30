@@ -56,4 +56,9 @@ public class Users_Channel_listService : IUser_Channel_listService
         existingUser_Channel_list =users_channel_listRepository.Save(existingUser_Channel_list);
         return mapper.Map<User_Channel_listModel>(existingUser_Channel_list);
     }
+    User_Channel_listModel IUser_Channel_listService.CreateUser_Channel_list(CreateUser_Channel_listModel user_channel_listModel)
+    {
+      var user_channel_list= mapper.Map<Entity.Models.Users_Channel_list>(user_channel_listModel);
+       return mapper.Map<User_Channel_listModel>(users_channel_listRepository.Save(user_channel_list));
+    }
 }

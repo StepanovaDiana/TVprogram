@@ -59,4 +59,9 @@ public class ProgramService : IProgramService
         existingProgram = programRepository.Save(existingProgram);
         return mapper.Map<ProgramModel>(existingProgram);
     }
+    ProgramModel IProgramService.CreateProgram(CreateProgramModel programModel)
+    {
+      var program= mapper.Map<Entity.Models.Programa>(programModel);
+       return mapper.Map<ProgramModel>(programRepository.Save(program));
+    }
 }

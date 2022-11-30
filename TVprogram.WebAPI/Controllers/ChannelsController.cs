@@ -25,6 +25,16 @@ namespace TVprogram.WebAPI.Controllers
             this.channelService=channelService;
             this.mapper=mapper;
         }
+        /// <summary>
+        /// create channel
+        /// </summary>
+        /// <returns></returns>
+        [HttpPost]
+        public IActionResult CreateChannel([FromBody]ChannelModel channel)
+        {
+            var response =channelService.CreateChannel(channel);
+            return Ok(response);
+        }
 
         
         /// <summary>

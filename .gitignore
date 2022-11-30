@@ -45,3 +45,7 @@ TVprogram.Entities/obj/Debug/net6.0/TVprogram.Entities.GeneratedMSBuildEditorCon
 TVprogram.Entities/obj/Debug/net6.0/TVprogram.Entities.GlobalUsings.g.cs
 TVprogram.Entity/bin/Debug/net6.0/TVprogram.Entity.dll
 TVprogram.Entity/bin/Debug/net6.0/TVprogram.Entity.pdb
+**/.vs 
+**/obj
+**/bin
+**/logs

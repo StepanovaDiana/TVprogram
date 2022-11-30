@@ -8,6 +8,15 @@ public class ServicesProfile : Profile
 {
     public ServicesProfile()
     {
+
+        #region Admin
+
+        
+        CreateMap<Admin, AdminModel>().ReverseMap();
+        CreateMap<Admin, AdminPreviewModel>()
+            .ForMember(x => x.Login, y => y.MapFrom(u => u.Login));
+
+        #endregion
         #region Users
 
         
@@ -43,10 +52,6 @@ public class ServicesProfile : Profile
             
 
         #endregion
-
-
-
-
 
         
     }

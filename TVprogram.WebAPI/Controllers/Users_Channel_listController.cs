@@ -25,6 +25,28 @@ namespace TVprogram.WebAPI.Controllers
             this.user_Channel_ListService=user_Channel_ListService;
             this.mapper=mapper;
         }
+        /// <summary>
+        /// create user_channel_list
+        /// </summary>
+        /// <returns></returns>
+        [HttpPost]
+        public IActionResult CreateUser_Channel_list([FromBody] CreateUser_Channel_listRequest user_Channel_List)
+        {
+           var validationResult = user_Channel_List.Validate();
+            if (!validationResult.IsValid)
+            {
+                return BadRequest(validationResult.Errors);
+            }
+            try
+            {
+                var resultModel =user_Channel_ListService.CreateUser_Channel_list(mapper.Map<CreateUser_Channel_listModel>(user_Channel_List));
+                return Ok(resultModel);
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e);
+            }
+        }
 
         
         /// <summary>

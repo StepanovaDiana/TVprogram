@@ -59,6 +59,12 @@
             admin controller
             </summary>
         </member>
+        <member name="M:TVprogram.WebAPI.Controllers.AdminController.CreateAdmin(TVprogram.Services.Models.AdminModel)">
+            <summary>
+            create admin
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:TVprogram.WebAPI.Controllers.AdminController.GetAdmins(System.Int32,System.Int32)">
             <summary>
             Get admin by pages
@@ -89,6 +95,12 @@
             Channels controller
             </summary>
         </member>
+        <member name="M:TVprogram.WebAPI.Controllers.ChannelsController.CreateChannel(TVprogram.Services.Models.ChannelModel)">
+            <summary>
+            create channel
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:TVprogram.WebAPI.Controllers.ChannelsController.GetChannels(System.Int32,System.Int32)">
             <summary>
             Get channels by pages
@@ -118,6 +130,12 @@
             <summary>
             Programs controller
             </summary>
+        </member>
+        <member name="M:TVprogram.WebAPI.Controllers.ProgramsController.CreateProgram(TVprogram.WebAPI.Models.CreateProgramRequest)">
+            <summary>
+            create program
+            </summary>
+            <returns></returns>
         </member>
         <member name="M:TVprogram.WebAPI.Controllers.ProgramsController.GetPrograms(System.Int32,System.Int32)">
             <summary>
@@ -179,6 +197,12 @@
             <summary>
             users_channel_list controller
             </summary>
+        </member>
+        <member name="M:TVprogram.WebAPI.Controllers.Users_Channel_listController.CreateUser_Channel_list(TVprogram.WebAPI.Models.CreateUser_Channel_listRequest)">
+            <summary>
+            create user_channel_list
+            </summary>
+            <returns></returns>
         </member>
         <member name="M:TVprogram.WebAPI.Controllers.Users_Channel_listController.GetUsers_Channel_list(System.Int32,System.Int32)">
             <summary>

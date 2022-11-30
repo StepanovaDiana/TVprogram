@@ -25,6 +25,28 @@ namespace TVprogram.WebAPI.Controllers
             this.programService=programService;
             this.mapper=mapper;
         }
+        /// <summary>
+        /// create program
+        /// </summary>
+        /// <returns></returns>
+        [HttpPost]
+        public IActionResult CreateProgram([FromBody] CreateProgramRequest program)
+        {
+            var validationResult = program.Validate();
+            if (!validationResult.IsValid)
+            {
+                return BadRequest(validationResult.Errors);
+            }
+            try
+            {
+                var resultModel =programService.CreateProgram(mapper.Map<CreateProgramModel>(program));
+                return Ok(resultModel);
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e);
+            }
+        }
 
         
         /// <summary>

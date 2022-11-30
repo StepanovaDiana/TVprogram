@@ -57,4 +57,5 @@ public class UserService : IUserService
         existingUser = usersRepository.Save(existingUser);
         return mapper.Map<UserModel>(existingUser);
     }
+   
 }
