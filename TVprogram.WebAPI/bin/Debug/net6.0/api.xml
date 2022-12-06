@@ -131,7 +131,7 @@
             Programs controller
             </summary>
         </member>
-        <member name="M:TVprogram.WebAPI.Controllers.ProgramsController.CreateProgram(TVprogram.WebAPI.Models.CreateProgramRequest)">
+        <member name="M:TVprogram.WebAPI.Controllers.ProgramsController.CreateProgram(System.Guid,TVprogram.Services.Models.ProgramModel)">
             <summary>
             create program
             </summary>
@@ -198,7 +198,7 @@
             users_channel_list controller
             </summary>
         </member>
-        <member name="M:TVprogram.WebAPI.Controllers.Users_Channel_listController.CreateUser_Channel_list(TVprogram.WebAPI.Models.CreateUser_Channel_listRequest)">
+        <member name="M:TVprogram.WebAPI.Controllers.Users_Channel_listController.CreateUser_Channel_list(System.Guid,System.Guid,TVprogram.Services.Models.User_Channel_listModel)">
             <summary>
             create user_channel_list
             </summary>

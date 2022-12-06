@@ -30,22 +30,10 @@ namespace TVprogram.WebAPI.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpPost]
-        public IActionResult CreateProgram([FromBody] CreateProgramRequest program)
+        public IActionResult CreateProgram([FromQuery] Guid ChannelId,[FromBody] ProgramModel program)
         {
-            var validationResult = program.Validate();
-            if (!validationResult.IsValid)
-            {
-                return BadRequest(validationResult.Errors);
-            }
-            try
-            {
-                var resultModel =programService.CreateProgram(mapper.Map<CreateProgramModel>(program));
-                return Ok(resultModel);
-            }
-            catch (Exception e)
-            {
-                return BadRequest(e);
-            }
+            var response = programService.CreateProgram(ChannelId,program);
+            return Ok(response);
         }
 
         

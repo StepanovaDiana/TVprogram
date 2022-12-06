@@ -9,6 +9,7 @@ namespace TVprogram.Services.Implementation;
 public class ProgramService : IProgramService
 {
     private readonly IRepository<Programa> programRepository;
+     private readonly IRepository<Channel> channelRepository;
     private readonly IMapper mapper;
     public ProgramService(IRepository<Programa> programRepository, IMapper mapper)
     {
@@ -59,9 +60,24 @@ public class ProgramService : IProgramService
         existingProgram = programRepository.Save(existingProgram);
         return mapper.Map<ProgramModel>(existingProgram);
     }
-    ProgramModel IProgramService.CreateProgram(CreateProgramModel programModel)
+    ProgramModel IProgramService.CreateProgram(Guid ChannelId,ProgramModel programModel)
     {
-      var program= mapper.Map<Entity.Models.Programa>(programModel);
-       return mapper.Map<ProgramModel>(programRepository.Save(program));
+      if(programRepository.GetAll(x=>x.Id==programModel.Id).FirstOrDefault()!=null)
+      {
+        throw new Exception ("Attempt to create a non-unique object!");
+      }
+      if(channelRepository.GetAll(x=>x.Id==programModel.ChannelId).FirstOrDefault() == null)
+        {
+            throw new Exception ("The object does not exist in the database!");
+        }
+        ProgramModel createProgram = new ProgramModel();
+        createProgram.ChannelId=programModel.ChannelId;
+        createProgram.Id=programModel.Id;
+        createProgram.Name=programModel.Name;
+        createProgram.Duration=programModel.Duration;
+        createProgram.Time=programModel.Time;
+        programRepository.Save(mapper.Map<Programa>(createProgram));
+        return createProgram;
+
     }
 }

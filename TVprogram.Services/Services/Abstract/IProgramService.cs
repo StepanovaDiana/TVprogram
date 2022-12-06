@@ -10,5 +10,5 @@ public interface IProgramService
     void DeleteProgram(Guid id);
 
     PageModel<ProgramPreviewModel> GetPrograms(int limit = 20, int offset = 0);
-    ProgramModel CreateProgram(CreateProgramModel programModel);
+    ProgramModel CreateProgram(Guid ChannelId,ProgramModel programModel);
 }

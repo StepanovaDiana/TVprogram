@@ -58,7 +58,15 @@ public class ChannelService :IChannelService
     }
     ChannelModel IChannelService.CreateChannel(ChannelModel channelModel)
     {
-       channelRepository.Save(mapper.Map<Entity.Models.Channel>(channelModel));
-        return channelModel;
+        if(channelRepository.GetAll(x=>x.Id==channelModel.Id).FirstOrDefault()!=null)
+       {
+        throw new Exception ("Attempt to create a non-unique object!");
+       }
+       ChannelModel create=new ChannelModel();
+       create.Id=channelModel.Id;
+       create.Name=channelModel.Name;
+       channelRepository.Save(mapper.Map<Entity.Models.Channel>(create));
+       return create;
+
     }
 }
