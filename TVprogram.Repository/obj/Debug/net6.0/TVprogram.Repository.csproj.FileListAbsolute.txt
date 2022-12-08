@@ -13,3 +13,5 @@ C:\Projects\TVprogram\TVprogram.Repository\obj\Debug\net6.0\TVprogram.Repository
 C:\Projects\TVprogram\TVprogram.Repository\obj\Debug\net6.0\refint\TVprogram.Repository.dll
 C:\Projects\TVprogram\TVprogram.Repository\obj\Debug\net6.0\TVprogram.Repository.pdb
 C:\Projects\TVprogram\TVprogram.Repository\obj\Debug\net6.0\ref\TVprogram.Repository.dll
+C:\Projects\TVprogram\TVprogram.Repository\bin\Debug\net6.0\TVprogram.Shared.dll
+C:\Projects\TVprogram\TVprogram.Repository\bin\Debug\net6.0\TVprogram.Shared.pdb

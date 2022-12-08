@@ -15,3 +15,5 @@ C:\Projects\TVprogram\TVprogram.Services\obj\Debug\net6.0\TVprogram.Services.dll
 C:\Projects\TVprogram\TVprogram.Services\obj\Debug\net6.0\refint\TVprogram.Services.dll
 C:\Projects\TVprogram\TVprogram.Services\obj\Debug\net6.0\TVprogram.Services.pdb
 C:\Projects\TVprogram\TVprogram.Services\obj\Debug\net6.0\ref\TVprogram.Services.dll
+C:\Projects\TVprogram\TVprogram.Services\bin\Debug\net6.0\TVprogram.Shared.dll
+C:\Projects\TVprogram\TVprogram.Services\bin\Debug\net6.0\TVprogram.Shared.pdb

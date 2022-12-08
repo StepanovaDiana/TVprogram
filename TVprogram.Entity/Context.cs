@@ -1,27 +1,33 @@
-﻿using TVprogram.Entity.Models;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using TVprogram.Entity.Models;
+
 namespace TVprogram.Entity;
-public class Context:DbContext
+public class Context : IdentityDbContext<User, UserRole, Guid>
 {
-    public DbSet<Admin>? Admin{get;set;}
-    public DbSet<Channel>? Channels{get;set;}
-    public DbSet<Programa>?  Programs{get;set;}
-    public DbSet<User>? Users{get;set;}
-    public DbSet<Users_Channel_list>? UserChannelLists{get;set;}
-    public Context  (DbContextOptions<Context> options): base(options){}
+    public Context(DbContextOptions<Context> options) : base(options) { }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
+        base.OnModelCreating(builder);
         #region Admin
 
         builder.Entity<Admin>().ToTable("admin");
         builder.Entity<Admin>().HasKey(x => x.Id);
 
         #endregion
-        #region Users
+         #region Users
 
         builder.Entity<User>().ToTable("users");
         builder.Entity<User>().HasKey(x => x.Id);
+
+        builder.Entity<IdentityUserClaim<Guid>>().ToTable("user_claims");
+        builder.Entity<IdentityUserLogin<Guid>>().ToTable("user_logins");
+        builder.Entity<IdentityUserToken<Guid>>().ToTable("user_tokens");
+        builder.Entity<UserRole>().ToTable("user_roles");
+        builder.Entity<IdentityRoleClaim<Guid>>().ToTable("user_role_claims");
+        builder.Entity<IdentityUserRole<Guid>>().ToTable("user_role_owners");
 
         #endregion
 

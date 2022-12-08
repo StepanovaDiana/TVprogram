@@ -27,7 +27,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Projects\\TVprogram\\TVprogram.Shared\\TVprogram.Shared.csproj": {
+                "projectPath": "C:\\Projects\\TVprogram\\TVprogram.Shared\\TVprogram.Shared.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -40,6 +44,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Duende.IdentityServer": {
+              "target": "Package",
+              "version": "[6.1.7, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.10, )"
@@ -111,6 +123,9 @@
             "projectReferences": {
               "C:\\Projects\\TVprogram\\TVprogram.Entity\\TVprogram.Entity.csproj": {
                 "projectPath": "C:\\Projects\\TVprogram\\TVprogram.Entity\\TVprogram.Entity.csproj"
+              },
+              "C:\\Projects\\TVprogram\\TVprogram.Shared\\TVprogram.Shared.csproj": {
+                "projectPath": "C:\\Projects\\TVprogram\\TVprogram.Shared\\TVprogram.Shared.csproj"
               }
             }
           }
@@ -125,6 +140,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.10, )"
@@ -222,6 +241,61 @@
         }
       }
     },
+    "C:\\Projects\\TVprogram\\TVprogram.Shared\\TVprogram.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projects\\TVprogram\\TVprogram.Shared\\TVprogram.Shared.csproj",
+        "projectName": "TVprogram.Shared",
+        "projectPath": "C:\\Projects\\TVprogram\\TVprogram.Shared\\TVprogram.Shared.csproj",
+        "packagesPath": "C:\\Users\\Диана\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\TVprogram\\TVprogram.Shared\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Диана\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Projects\\TVprogram\\TVprogram.WebAPI\\TVprogram.WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -254,6 +328,9 @@
               },
               "C:\\Projects\\TVprogram\\TVprogram.Services\\TVprogram.Services.csproj": {
                 "projectPath": "C:\\Projects\\TVprogram\\TVprogram.Services\\TVprogram.Services.csproj"
+              },
+              "C:\\Projects\\TVprogram\\TVprogram.Shared\\TVprogram.Shared.csproj": {
+                "projectPath": "C:\\Projects\\TVprogram\\TVprogram.Shared\\TVprogram.Shared.csproj"
               }
             }
           }
@@ -276,6 +353,18 @@
               "target": "Package",
               "version": "[12.0.0, )"
             },
+            "Duende.IdentityServer": {
+              "target": "Package",
+              "version": "[6.1.7, )"
+            },
+            "Duende.IdentityServer.AspNetIdentity": {
+              "target": "Package",
+              "version": "[6.1.7, )"
+            },
+            "Duende.IdentityServer.EntityFramework": {
+              "target": "Package",
+              "version": "[6.1.7, )"
+            },
             "FluentValidation": {
               "target": "Package",
               "version": "[11.2.2, )"
@@ -284,13 +373,21 @@
               "target": "Package",
               "version": "[11.2.2, )"
             },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.11, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.11, )"
+            },
             "Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer": {
               "target": "Package",
               "version": "[5.0.0, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[6.0.10, )"
+              "version": "[6.0.11, )"
             },
             "Microsoft.EntityFrameworkCore.Proxies": {
               "target": "Package",

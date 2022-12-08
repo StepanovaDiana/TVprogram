@@ -12,3 +12,6 @@ C:\Projects\TVprogram\TVprogram.Entity\obj\Debug\net6.0\refint\TVprogram.Entity.
 C:\Projects\TVprogram\TVprogram.Entity\obj\Debug\net6.0\TVprogram.Entity.pdb
 C:\Projects\TVprogram\TVprogram.Entity\obj\Debug\net6.0\TVprogram.Entity.genruntimeconfig.cache
 C:\Projects\TVprogram\TVprogram.Entity\obj\Debug\net6.0\ref\TVprogram.Entity.dll
+C:\Projects\TVprogram\TVprogram.Entity\bin\Debug\net6.0\TVprogram.Shared.dll
+C:\Projects\TVprogram\TVprogram.Entity\bin\Debug\net6.0\TVprogram.Shared.pdb
+C:\Projects\TVprogram\TVprogram.Entity\obj\Debug\net6.0\TVprogram.Entity.csproj.CopyComplete
