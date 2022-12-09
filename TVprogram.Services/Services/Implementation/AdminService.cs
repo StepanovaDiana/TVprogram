@@ -63,7 +63,6 @@ public class AdminService :IAdminService
         throw new Exception ("Attempt to create a non-unique object!");
        }
        AdminModel create=new AdminModel();
-       create.Id=adminModel.Id;
        create.Login=adminModel.Login;
        adminRepository.Save(mapper.Map<Entity.Models.Admin>(create));
        return create;

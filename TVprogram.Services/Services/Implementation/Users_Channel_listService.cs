@@ -9,8 +9,7 @@ namespace TVprogram.Services.Implementation;
 public class Users_Channel_listService : IUser_Channel_listService
 {
     private readonly IRepository<Users_Channel_list> users_channel_listRepository;
-    private readonly IRepository<User> userRepository;
-    private readonly IRepository<Channel> channelRepository;
+
     private readonly IMapper mapper;
     public Users_Channel_listService(IRepository<Users_Channel_list> users_channel_listRepository, IMapper mapper)
     {
@@ -65,17 +64,9 @@ public class Users_Channel_listService : IUser_Channel_listService
       {
         throw new Exception ("Attempt to create a non-unique object!");
       }
-      if(channelRepository.GetAll(x=>x.Id==user_channel_listModel.ChannelId).FirstOrDefault() == null)
-        {
-            throw new Exception ("The object does not exist in the database!");
-        }
-    if(userRepository.GetAll(x=>x.Id==user_channel_listModel.UserId).FirstOrDefault() == null)
-        {
-            throw new Exception ("The object does not exist in the database!");
-        }
+      
         User_Channel_listModel create = new User_Channel_listModel();
         create.ChannelId=user_channel_listModel.ChannelId;
-        create.Id=user_channel_listModel.Id;
         create.UserId=user_channel_listModel.UserId;
         create.Favorite_Channel=user_channel_listModel.Favorite_Channel;
         users_channel_listRepository.Save(mapper.Map<Users_Channel_list>(create));

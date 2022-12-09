@@ -36,7 +36,7 @@ public class AuthService : IAuthService
         var existingUser = await userManager.FindByEmailAsync(model.Email);
         if (existingUser != null)
         {
-            throw new Exception("User already exists");
+            throw new LogicException(ResultCode.USER_ALREADY_EXISTS);
         }
 
         var user = new User()
@@ -44,6 +44,7 @@ public class AuthService : IAuthService
             Email = model.Email,
             UserName = model.Email, // обязательно
             Name = model.Name ?? "",
+           
             EmailConfirmed = true //to make it easier
         };
 
