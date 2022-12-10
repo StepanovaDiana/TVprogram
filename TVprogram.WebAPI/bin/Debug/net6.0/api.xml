@@ -237,5 +237,15 @@
             Update user_channel_list
             </summary>
         </member>
+        <member name="T:CityForum.WebApi.Controllers.AuthController">
+            <summary>
+            Auth endpoints
+            </summary>
+        </member>
+        <member name="M:CityForum.WebApi.Controllers.AuthController.#ctor(TVprogram.Services.Abstract.IAuthService,AutoMapper.IMapper)">
+            <summary>
+            Auth controller
+            </summary>
+        </member>
     </members>
 </doc>

@@ -2,6 +2,7 @@ using System;
 using TVprogram.Entity;
 using TVprogram.Entity.Models;
 using TVprogram.Services.Abstract;
+using TVprogram.Repository;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -22,15 +23,14 @@ public static class RepositoryInitializer
         });
     }
 
-    public static async Task InitializeRepository(IServiceProvider provider)
+    public static async Task InitializeRepository(IApplicationBuilder app)
     {
-        using (var scope = provider.GetService<IServiceScopeFactory>().CreateScope())
+        using (var scope = app.ApplicationServices.GetService<IServiceScopeFactory>().CreateScope())
         {
-            var context = scope.ServiceProvider.GetRequiredService<Context>();            
-            context.Database.Migrate();
+           
             
-            var userManager = (UserManager<User>)scope.ServiceProvider.GetRequiredService(typeof(UserManager<User>));
-            var user = await userManager.FindByEmailAsync(MASTER_ADMIN_EMAIL);
+            var userRepository = (IRepository<User>)scope.ServiceProvider.GetRequiredService(typeof(IRepository<User>));
+            var user =  userRepository.GetAll().Where(x => x.Email == MASTER_ADMIN_EMAIL).FirstOrDefault();
             if (user == null)
             {
                 var authService = (IAuthService)scope.ServiceProvider.GetRequiredService(typeof(IAuthService));
