@@ -3,6 +3,8 @@ using TVprogram.Entity.Models;
 using TVprogram.Repository;
 using TVprogram.Services.Abstract;
 using TVprogram.Services.Models;
+using TVprogram.Shared.Exceptions;
+using TVprogram.Shared.ResultCodes;
 
 namespace TVprogram.Services.Implementation;
 
@@ -21,7 +23,7 @@ public class UserService : IUserService
         var userToDelete = usersRepository.GetById(id);
         if (userToDelete == null)
         {
-            throw new Exception("User not found");
+             throw new LogicException(ResultCode.USER_NOT_FOUND);
         }
 
         usersRepository.Delete(userToDelete);
@@ -30,18 +32,22 @@ public class UserService : IUserService
     public UserModel GetUser(Guid id)
     {
         var user = usersRepository.GetById(id);
+        if (user == null)
+        {
+            throw new LogicException(ResultCode.USER_NOT_FOUND);
+        }
         return mapper.Map<UserModel>(user);
     }
 
     public PageModel<UserPreviewModel> GetUsers(int limit = 20, int offset = 0)
     {
-        var users = usersRepository.GetAll();
+         var users = usersRepository.GetAll(); //query created
         int totalCount = users.Count();
-        var chunk = users.OrderBy(x => x.Email).Skip(offset).Take(limit);
+        var chunk = users.OrderBy(x => x.Email).Skip(offset).Take(limit); //query updated IQueruable<User>
 
         return new PageModel<UserPreviewModel>()
         {
-            Items = mapper.Map<IEnumerable<UserPreviewModel>>(users),
+            Items = chunk.Select(x => mapper.Map<UserPreviewModel>(x)),
             TotalCount = totalCount
         };
     }
@@ -51,9 +57,12 @@ public class UserService : IUserService
         var existingUser = usersRepository.GetById(id);
         if (existingUser == null)
         {
-            throw new Exception("User not found");
+            throw new LogicException(ResultCode.USER_NOT_FOUND);
         }
-        existingUser.Name=user.Name;
+
+        existingUser.Name = user.Name;
+
+
         existingUser = usersRepository.Save(existingUser);
         return mapper.Map<UserModel>(existingUser);
     }

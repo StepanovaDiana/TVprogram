@@ -29,14 +29,11 @@ public class AuthService : IAuthService
         this.userManager = userManager;
         this.signInManager = signInManager;
         this.mapper = mapper;
-       // this.configuration = configuration;
         identityUri = configuration.GetValue<string>("IdentityServer:Uri");
     }
     public async Task<UserModel> RegisterUser(RegisterUserModel model)
     {
-        var existingUser = usersRepository.GetAll()
-         .Where(x => x.Email.ToLower() == model.Email.ToLower())
-        .FirstOrDefault();
+        var existingUser = await userManager.FindByEmailAsync(model.Email);
         if (existingUser != null)
         {
             throw new LogicException(ResultCode.USER_ALREADY_EXISTS);
@@ -45,7 +42,7 @@ public class AuthService : IAuthService
         var user = new User()
         {
             Email = model.Email,
-            UserName = model.Email, // обязательно
+            UserName = model.Login, // обязательно
             Name = model.Name ?? "",
            
             EmailConfirmed = true //to make it easier
@@ -57,18 +54,13 @@ public class AuthService : IAuthService
             throw new LogicException(ResultCode.IDENTITY_SERVER_ERROR);
         }
 
-        var createdUser = usersRepository.GetAll()
-        .Where(x => x.Email.ToLower() == model.Email.ToLower())
-        .FirstOrDefault();
-
+        var createdUser = usersRepository.GetAll(f => f.Email == model.Email).FirstOrDefault();
         return mapper.Map<UserModel>(createdUser);
     }
 
     public async Task<IdentityModel.Client.TokenResponse> LoginUser(LoginUserModel model)
     {
-        var user = usersRepository.GetAll()
-        .Where(x => x.Email.ToLower() == model.Email.ToLower())
-        .FirstOrDefault();
+        var user = await userManager.FindByEmailAsync(model.Email);
         if (user == null)
         {
             throw new LogicException(ResultCode.USER_NOT_FOUND);
